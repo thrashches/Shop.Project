@@ -5,11 +5,11 @@ export async function initDataBase(): Promise<Connection | null> {
 
   try {
     connection = await mysql.createConnection({
-      host: 'localhost',
-      port: 3306,
-      password: '12345678',
-      user: 'editor',
-      database: 'ProductsApplication'
+      host: process.env.SQL_HOST,
+      port: Number(process.env.SQL_PORT),
+      password: process.env.SQL_PASSWORD,
+      user: process.env.SQL_USER,
+      database: process.env.SQL_DATABASE
     });
   } catch (e) {
     console.error(e.message || e);
