@@ -51,3 +51,18 @@ body {
 .product-item .label {
     font-weight: 600;
 }
+
+.products-search-form {
+    margin-bottom: 40px;
+}
+
+.products-search {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 10px;
+}
+
+.products-search label {
+    display: block;
+    margin-bottom: 5px;
+}
