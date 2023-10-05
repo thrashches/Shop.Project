@@ -17,3 +17,16 @@ export async function searchProducts(
     );
     return data || [];
 }
+
+export async function getProduct(
+    id: string
+): Promise<IProduct | null> {
+    try {
+        const { data } = await axios.get < IProduct > (
+            `${host}/products/${id}`
+        );
+        return data;
+    } catch (e) {
+        return null;
+    }
+}
